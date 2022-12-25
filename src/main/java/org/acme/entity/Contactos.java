@@ -4,7 +4,7 @@ package org.acme.entity;
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotEmpty;
+
 
 @Entity
 @Table(name = "Contactos")
@@ -15,7 +15,6 @@ public class Contactos extends PanacheEntity {
     private Long id;
 
     @Column(name = "nombre")
-    @NotEmpty(message ="El nombre no puede estar vacio")
     private String nombre;
 
     @Column(name ="apellido")
@@ -25,7 +24,6 @@ public class Contactos extends PanacheEntity {
     private String email;
 
     @Column(name = "telefono")
-    @NotEmpty(message ="El telefono no puede estar vacio")
     private String telefono;
 
 
